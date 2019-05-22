@@ -2,15 +2,35 @@
 <html lang="zh-Hans">
 <head>
     <link rel="stylesheet" href="./style.css">
+    <script src="//at.alicdn.com/t/font_1206057_06qakvcpw61.js"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- viewport 防止缩放 -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>我的画板</title>
     <canvas id="xxx" width=300 height=300></canvas>
   <div id=actions class="actions">
-    <button id=eraser>橡皮擦</button>
-    <button id=brush>画笔</button>
+        <svg id=pen class="active icon" >
+                <use xlink:href="#icon-pan_iconxuzhong"></use>
+            </svg>
+            <svg id=eraser class="icon" >
+                    <use xlink:href="#icon-eraser"></use>
+                </svg> 
+                <svg id=clear class="icon" >
+                        <use xlink:href="#icon-clear"></use>
+                    </svg> 
+                    <svg id=download class="icon" >
+                            <use xlink:href="#icon-save"></use>
+                        </svg> 
   </div>
+  <ol class="colors">
+      <li id="red" class="red active"></li>
+      <li  id="blue" class="blue"></li>
+      <li  id="green" class="green "></li> 
+
+  </ol>
+  <ol class="sizes">
+      <li id= "thin" class="thin"></li>
+      <li id= "thick" class="thick"></li>
 </head>
 <body>
     <script src="./main.js"></script>
